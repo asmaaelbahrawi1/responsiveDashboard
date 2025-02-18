@@ -1,0 +1,154 @@
+:root{
+    --background:#403f40;
+    --white:#fff;
+    --menuBackground:#928e90;
+    --linksBackground:#D17D98;
+    --log-out:#db356c;
+    --secondryColor: #db356c;
+    --priceColor: #D17D98;
+    --countColor:#D17D98;
+
+}
+*{
+    padding:0;
+    margin: 0; 
+    color: var(--white);
+    font-family: cursive;
+}
+body{
+    background-color: var(--background);
+    display: flex;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.img-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--white);
+    flex-shrink: 0;
+}
+.img-box img{
+    width: 100%;
+}
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.menu{
+    background-color: var(--menuBackground);
+    width: 60px;
+    overflow: hidden;
+    height: 100vh;
+    padding: 20px;
+    transition: .5s;
+    
+}
+.menu:hover{
+    width: 260px;
+}
+ul{
+    list-style: none;
+    position: relative;
+    height: 95%;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: 0.5s;
+}
+ul li a:hover , .active , .data-info .box:hover , td:hover{
+    background-color: var(--linksBackground);
+}
+.log-out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.log-out a{
+    background-color: var(--log-out);
+}
+ul li a i{
+    font-size: 30px ;
+}
+/* ---------- */
+.content{
+    width: 100%;
+    margin: 10px;
+}
+.title-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondryColor);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0 ;
+}
+.data-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.data-info .box{
+    background-color: var(--menuBackground);
+    height: 150px;
+    flex-basis: 150px;
+    border-radius: 8px;
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    transition:.5s;
+
+}
+.data-info .box i{
+    font-size: 40px;
+}
+.data{
+    text-align: center;
+}
+.data span{
+    font-size: 30px;
+}
+/* ------------- */
+table{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    border-spacing: 8px;
+}
+td, th{
+    background-color: var(--menuBackground);
+    border-radius: 8px;
+    height: 40px;
+}
+th{
+    background-color: var(--secondryColor);
+}
+td{
+    transition: .5s;
+}
+.price,.count{
+    padding: 6px;
+    border-radius: 6px;
+}
+.price{
+    background-color: var(--priceColor);
+}
+.count{
+    background-color: var(--countColor);
+}
